@@ -18,7 +18,7 @@ app.get("/", function (req, res) {
 });
 
 app.use("/categories", categoriesRouter);
-app.use("/subCategories", subCategoriesRouter);
+app.use("/sub-categories", subCategoriesRouter);
 app.use("/comments", commentsRouter);
 app.use("/credentials", userCredentialsRouter);
 app.use("/posts", userPostsRouter);

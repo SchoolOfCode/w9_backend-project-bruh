@@ -11,7 +11,7 @@ router.get("/", async function (req, res) {
         payload: result,
     });
 });
-
+//get by id
 router.get("/:id", async function (req, res) {
     const id = await Number(req.params.id);
     const result = await getCommentsById(id);
