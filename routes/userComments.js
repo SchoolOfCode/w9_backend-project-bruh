@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import {getComments} from "../models/index.js";
+import {getComments, getCommentsById} from "../models/index.js";
 
 //general get all request
 router.get("/", async function (req, res) {
@@ -11,5 +11,15 @@ router.get("/", async function (req, res) {
         payload: result,
     });
 });
+
+router.get("/:id", async function (req, res) {
+    const id = await Number(req.params.id);
+    const result = await getCommentsById(id);
+    res.json({
+      success: true,
+      message: `you are looking at comment with id ${id}`,
+      payload: result,
+    });
+  });
 
 export default router;

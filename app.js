@@ -18,10 +18,10 @@ app.get("/", function (req, res) {
 });
 
 app.use("/categories", categoriesRouter);
-app.use("/sub-categories", subCategoriesRouter);
-app.use("/userComments", commentsRouter);
-app.use("/userCredentials", userCredentialsRouter);
-app.use("/userPosts", userPostsRouter);
+app.use("/subCategories", subCategoriesRouter);
+app.use("/comments", commentsRouter);
+app.use("/credentials", userCredentialsRouter);
+app.use("/posts", userPostsRouter);
 
 
 app.listen(PORT, function () {

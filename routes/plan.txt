@@ -42,8 +42,23 @@ Tables:
 Models:
 
 -   These are the functions that are responsible for requesting specific info from the Database
+Create:
+    -   Create new
+        -   comments
+        -   post
+        -   categories (?)
+        -   subcategories (?)
+        -   credentials
 
+Read:
     -   getAll
+        -   comments✅
+        -   creds✅ (user)
+        -   posts✅
+        -   categories✅
+        -   subcategories✅
+
+    -  getById
         -   comments✅
         -   users 
         -   creds✅
@@ -51,4 +66,16 @@ Models:
         -   categories✅
         -   subcategories✅
 
+Update:
+    - update existing:
+        -   comments
+        -   post
+        -   credentials
+
+
+Delete:
+    - update existing:
+        -   comments
+        -   post
+        -   credentials
 
