@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import getCredentials from "../models/index.js";
+import {getCredentials} from "../models/index.js";
 
 //general get all request
 router.get("/", async function (req, res) {
@@ -10,3 +10,4 @@ router.get("/", async function (req, res) {
         payload: result
     });
 });
+export default router;

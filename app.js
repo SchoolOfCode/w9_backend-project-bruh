@@ -1,6 +1,10 @@
 import express from "express";
 import categoriesRouter from "./routes/categories.js";
 import subCategoriesRouter from "./routes/subCategories.js";
+import commentsRouter from "./routes/userComments.js"
+import userCredentialsRouter from "./routes/userCredentials.js"
+import userPostsRouter from "./routes/userPosts.js"
+
 const app = express();
 const PORT = process.env.port || 3000;
 
@@ -15,6 +19,10 @@ app.get("/", function (req, res) {
 
 app.use("/categories", categoriesRouter);
 app.use("/sub-categories", subCategoriesRouter);
+app.use("/userComments", commentsRouter);
+app.use("/userCredentials", userCredentialsRouter);
+app.use("/userPosts", userPostsRouter);
+
 
 app.listen(PORT, function () {
   console.log(`Server is running on port ${PORT}`);
